@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../servizi/api.service';
-import { animate, state, style, transition, trigger } from '@angular/animations';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'app-scuola',
@@ -12,21 +12,15 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
 })
 export class ScuolaComponent implements OnInit{
 
+  @Input() scuola: any;
+
   constructor(private api: ApiService) { }
   dataScuole: any;
-  visible: boolean = false;
 
   ngOnInit(): void {
     this.api.searchDataSchools("schools").subscribe((data) => {
       this.dataScuole = data.data;
-      console.log(this.dataScuole[0]);
     });
   }
-
-  proca(): void{
-    console.log("proca");
-    this.visible = !this.visible;
-  }
-
 
 }

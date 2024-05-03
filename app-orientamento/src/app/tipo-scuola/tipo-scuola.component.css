@@ -1,0 +1,21 @@
+
+
+#tipo {
+    height: 100px;
+    width: 750px;
+    background-color: burlywood;
+    transition: height 500ms;
+    overflow: hidden;
+}
+
+#tipo:hover {
+    height: 200px;
+}
+
+
+#titolo {
+    height: 100px;
+    width: 750px;
+    /* background-image: url('../../assets/Immagine.png'); */
+    background-color: red;
+}
