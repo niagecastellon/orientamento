@@ -20,6 +20,9 @@
     },
     "sito": {
       "type": "string"
+    },
+    "descrizione": {
+      "type": "text"
     }
   }
 }

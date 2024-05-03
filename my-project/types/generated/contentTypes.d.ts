@@ -840,6 +840,7 @@ export interface ApiSchoolSchool extends Schema.CollectionType {
     nome: Attribute.String;
     tipo: Attribute.String;
     sito: Attribute.String;
+    descrizione: Attribute.Text;
     createdAt: Attribute.DateTime;
     updatedAt: Attribute.DateTime;
     publishedAt: Attribute.DateTime;

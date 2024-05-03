@@ -1,3 +1,11 @@
-<div>
-    
-</div>
+@for(scuola of dataScuole; track $index){
+    @if(visible){
+        <h1 [@visibilityChanged]>{{dataScuole[$index].attributes.nome}}</h1>
+    }
+    <b>{{dataScuole[$index].attributes.tipo}}</b>
+    <p >{{dataScuole[$index].attributes.descrizione}}</p>
+    <button (click)="proca()">allawakbar</button>
+    <a href="{{dataScuole[$index].attributes.sito}}" target="_blank">🌐 Sito</a>
+    <hr>
+
+}
