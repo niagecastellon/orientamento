@@ -1,8 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ViewChild } from '@angular/core';
-import { ElementRef } from '@angular/core';
 import { ScuolaComponent } from '../scuola/scuola.component';
-import { ApiService } from '../servizi/api.service';
 import { CommonModule, NgStyle } from '@angular/common';
 
 @Component({
@@ -21,6 +18,8 @@ export class TipoScuolaComponent implements OnInit {
 liceo: boolean = false;
 tecnico: boolean = false;
 professionale: boolean = false;
+quadriennali: boolean = false;
+istProf: boolean = false;
 
 // @Input() colori!: string[];
 
@@ -43,6 +42,12 @@ checkTipo(): void {
   }
   if (this.tipo == "professionali") {
     this.professionale = true;
+  }
+  if (this.tipo == "istituti professionali") {
+    this.istProf = true;
+  }
+  if (this.tipo == "quadriennali") {
+    this.quadriennali = true;
   }
 }
 

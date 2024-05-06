@@ -12,9 +12,11 @@ import { Input } from '@angular/core';
 export class ScuolaComponent implements OnInit{
 
   @Input() scuola: any;
-
+  percorsoImg!: string;
+  
   ngOnInit(): void {
-
+    this.percorsoImg = "../../assets/loghiScuole/" + this.scuola.logo  + "1.png";
+    console.log(this.scuola.logo);
   }
 
 }

@@ -18,10 +18,14 @@ export class HomeComponent implements OnInit{
   licei: any[] = [];  
   tecnici: any[] = [];
   professionali: any = [];
+  quadriennali: any = [];
+  istProf: any = [];
 
   tipoLicei:string = "licei";
   tipoTecnici:string = "tecnici";
   tipoProfessionali:string = "professionali";
+  tipoIstProf:string = "istituti professionali";
+  tipoQuadriennali:string = "quadriennali";
 
   /*
   Liceo
@@ -46,14 +50,22 @@ export class HomeComponent implements OnInit{
         if (this.data[i].attributes.tipo.includes("Istituto Tecnico")) {
           this.tecnici.push(this.data[i]);
         }
-        if (this.data[i].attributes.tipo.includes("Professionale")) {
+        if (this.data[i].attributes.tipo.includes("Scuola Professionale")) {
           this.professionali.push(this.data[i]);
+        }
+        if (this.data[i].attributes.tipo.includes("Istituto Professionale")) {
+          this.istProf.push(this.data[i]);
+        }
+        if (this.data[i].attributes.tipo.includes("Quadriennale")) {
+          this.quadriennali.push(this.data[i]);
         }
       }
 
-      console.log(this.licei);
-      console.log(this.tecnici);
-      console.log(this.professionali);
+      console.log("licei " + this.licei);
+      console.log("tec " + this.tecnici);
+      console.log("prof " + this.professionali);
+      console.log("ist " + this.istProf);
+      console.log("quad " + this.quadriennali);
 
     });
   }

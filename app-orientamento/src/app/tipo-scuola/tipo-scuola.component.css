@@ -64,6 +64,7 @@
     flex-direction: column;
     height: 100px;
     width: 100%;
+    margin-bottom: 20px;
 }
 
 #titolo h1 {
@@ -76,7 +77,7 @@
 }
 
 .licei {
-    background: linear-gradient(to bottom right, #ed5f5f 50% ,#f08267 50%);
+    background: linear-gradient(to bottom right, #ed5f5f 50%,#f08267 50%);
 }
 
 .tecnici {
@@ -85,6 +86,14 @@
 
 .professionali {
     background: linear-gradient(to bottom right, #8ebfb4 50%, #cce0da 50%);
+}
+
+.ist-prof {
+    background: linear-gradient(to bottom right, #415dab 50%, #8797cc 50%);
+}
+
+.quadriennali {
+    background: linear-gradient(to bottom right, #828487 50%, #cbd4d2 50%);
 }
 
 .c-licei {
@@ -97,4 +106,12 @@
 
 .c-professionali {
     background-color: #cce0da;
+}
+
+.c-ist-prof {
+    background-color: #8797cc;
+}
+
+.c-quadriennali {
+    background-color: #cbd4d2;
 }

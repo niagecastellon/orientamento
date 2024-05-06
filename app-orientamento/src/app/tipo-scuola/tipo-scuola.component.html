@@ -1,12 +1,16 @@
 <div id="tipo" [ngClass]="{
     'c-licei': liceo,
     'c-tecnici': tecnico,
-    'c-professionali': professionale
+    'c-professionali': professionale,
+    'c-ist-prof': istProf,
+    'c-quadriennali': quadriennali
   }">
     <div id="titolo" [ngClass]="{
         'licei': liceo,
         'tecnici': tecnico,
-        'professionali': professionale
+        'professionali': professionale,
+        'ist-prof': istProf,
+        'quadriennali': quadriennali,
       }">
       <h1>{{tipo.toUpperCase()}}</h1>
     </div>

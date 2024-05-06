@@ -1,3 +1,30 @@
-div {
+#main {
     transition: all 0.5s linear;
+    color: white;
+}
+
+#dettagli {
+    display: grid;
+    grid-template-columns: 400px auto;
+    height: 150px;
+}
+
+h1, h2 {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-size: 24px;
+}
+
+h1 {
+    font-size: 36px;
+}
+
+img {
+    height: 75px;
+    border: 2px solid currentColor;
 }

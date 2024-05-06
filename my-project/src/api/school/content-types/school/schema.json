@@ -23,6 +23,9 @@
     },
     "descrizione": {
       "type": "text"
+    },
+    "logo": {
+      "type": "string"
     }
   }
 }
