@@ -1,9 +1,30 @@
 nav {
     width: 100%;
-    background-color: black;
+    background-color: gray;
     color: white;
     height: 75px;
     margin: 0;
     position: sticky;
     top: 0;
+}
+#principale{
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    align-content: flex-start;
+}
+#logo{
+    flex: 20%;
+}
+
+#ricerca{
+    flex: 10%;
+}
+#logo{
+    display: flex;
+}
+
+.spazio{
+    flex:70%;
 }

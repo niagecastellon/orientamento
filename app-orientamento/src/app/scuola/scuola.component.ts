@@ -7,20 +7,14 @@ import { Input } from '@angular/core';
   standalone: true,
   imports: [],
   templateUrl: './scuola.component.html',
-  styleUrl: './scuola.component.css',
-  
+  styleUrl: './scuola.component.css'
 })
 export class ScuolaComponent implements OnInit{
 
   @Input() scuola: any;
 
-  constructor(private api: ApiService) { }
-  dataScuole: any;
-
   ngOnInit(): void {
-    this.api.searchDataSchools("schools").subscribe((data) => {
-      this.dataScuole = data.data;
-    });
+
   }
 
 }

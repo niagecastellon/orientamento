@@ -1,12 +1,18 @@
-<div id="tipo">
-    
-    <div id="titolo">
-        <img src="" alt="immagine del tipo della scuola">
+<div id="tipo" [ngClass]="{
+    'c-licei': liceo,
+    'c-tecnici': tecnico,
+    'c-professionali': professionale
+  }">
+    <div id="titolo" [ngClass]="{
+        'licei': liceo,
+        'tecnici': tecnico,
+        'professionali': professionale
+      }">
+      <h1>{{tipo.toUpperCase()}}</h1>
     </div>
-    @for(s of scuole; track scuole){
-        <app-scuola></app-scuola>
-    }
+    <div>
+        @for(s of scuole; track scuole){
+            <app-scuola [scuola]="s.attributes"></app-scuola>
+        }
+    </div>
 </div>
-
-
-

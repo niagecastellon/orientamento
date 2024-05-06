@@ -19,29 +19,42 @@ export class HomeComponent implements OnInit{
   tecnici: any[] = [];
   professionali: any = [];
 
+  tipoLicei:string = "licei";
+  tipoTecnici:string = "tecnici";
+  tipoProfessionali:string = "professionali";
+
+  /*
+  Liceo
+  Istituto Tecnico Tecnologico
+  Istituto Tecnico e Professionale
+  Istituo Tecnico Economico Tecnologico
+  Liceo Internazionale
+  Professionale
+  */
 
   ngOnInit(): void {
-    this.api.searchDataSchools("schools").subscribe((data) => {
+    this.api.searchDataSchools().subscribe((data) => {
       this.data = data.data;
+
+      console.log(data);
+
+      // console.log(this.data);
+      for (let i = 0; i < this.data.length; i++) {
+        if (this.data[i].attributes.tipo.includes("Liceo")) {
+          this.licei.push(this.data[i]);
+        }
+        if (this.data[i].attributes.tipo.includes("Istituto Tecnico")) {
+          this.tecnici.push(this.data[i]);
+        }
+        if (this.data[i].attributes.tipo.includes("Professionale")) {
+          this.professionali.push(this.data[i]);
+        }
+      }
+
+      console.log(this.licei);
+      console.log(this.tecnici);
+      console.log(this.professionali);
+
     });
-
-    this.licei.push(this.data[0]);
-    this.licei.push(this.data[2]);
-    this.licei.push(this.data[5]);
-    this.licei.push(this.data[6]);
-
-    this.tecnici.push(this.data[1]);
-    this.tecnici.push(this.data[3]);
-    this.tecnici.push(this.data[4]);  
-
-    this.professionali.push(this.data[3]);
-    this.professionali.push(this.data[7]);
-    this.professionali.push(this.data[8]);
-    this.professionali.push(this.data[9]);
-
-    console.log(this.licei);
-    console.log(this.tecnici);
-    console.log(this.professionali);
   }
-  
 }

@@ -3,46 +3,48 @@ import { ViewChild } from '@angular/core';
 import { ElementRef } from '@angular/core';
 import { ScuolaComponent } from '../scuola/scuola.component';
 import { ApiService } from '../servizi/api.service';
+import { CommonModule, NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-tipo-scuola',
   standalone: true,
-  imports: [ScuolaComponent],
+  imports: [ScuolaComponent, CommonModule, NgStyle],
   templateUrl: './tipo-scuola.component.html',
   styleUrl: './tipo-scuola.component.css'
 })
-export class TipoScuolaComponent implements OnInit{
+export class TipoScuolaComponent implements OnInit {
 
-  @Input() scuole: any;
+@Input() scuole: any;
 
-  ngOnInit(): void {
+@Input() tipo!: string;
 
+liceo: boolean = false;
+tecnico: boolean = false;
+professionale: boolean = false;
+
+// @Input() colori!: string[];
+
+// colore1!: string;
+// colore2!: string;
+
+ngOnInit(): void {
+  // console.log(this.colori);
+  // this.colore1 = this.colori[0];
+  // this.colore2 = this.colori[1];
+  this.checkTipo();
+}
+
+checkTipo(): void {
+  if (this.tipo == "licei") {
+    this.liceo = true;
   }
+  if (this.tipo == "tecnici") {
+    this.tecnico = true;
+  }
+  if (this.tipo == "professionali") {
+    this.professionale = true;
+  }
+}
 
 }
 
-  // constructor(private api: ApiService) { }
-
-  // tipiScuole = ["Liceo", "Istituto tecnico", "Professionale"];
-  // Licei: string[] = [];
-  // Tecnici: string[] = [];
-  // Professionali: string[] = [];
-
-      // this.api.searchDataSchools("schools").subscribe((data) => {
-      //   data = data.data;
-      //   // console.log(data);
-      //   for(let i = 0; i < data.length; i++){
-      //     if(data[i].attributes.tipo == "Liceo"){
-      //       this.Licei.push(data[i].attributes);
-      //     }
-      //     else if("Istituto Tecnico" in data[i].attributes.tipo){
-      //       this.Tecnici.push(data[i].attributes);
-      //     }
-      //     else if(data[i].attributes.tipo == "Professionale"){
-      //       this.Professionali.push(data[i].attributes);
-      //     }
-      //   }
-      //   console.log(this.Licei);
-      //   console.log(this.Tecnici);
-      //   console.log(this.Professionali);
-      // });

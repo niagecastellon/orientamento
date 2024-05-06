@@ -1,21 +1,100 @@
+/* MEDIA QUERIES */
+@media only screen and (max-width:1920px) { 
+	#tipo {
+        height: 100px;
+        width: 1600px;
+        overflow: hidden;
+        margin-top: 25px;
+    }
+}
 
+@media only screen and (max-width:1700px) { 
+	#tipo {
+        height: 100px;
+        width: 1400px;
+        overflow: hidden;
+        margin-top: 25px;
+    }
+}
 
-#tipo {
-    height: 100px;
-    width: 750px;
-    background-color: burlywood;
-    transition: height 500ms;
-    overflow: hidden;
+@media only screen and (max-width:1400px) { 
+	#tipo {
+        height: 100px;
+        width: 1024px;
+        overflow: hidden;
+        margin-top: 25px;
+    }
+}
+
+@media only screen and (max-width:1024px) { 
+	#tipo {
+        height: 100px;
+        width: 750px;
+        overflow: hidden;
+        margin-top: 25px;
+    }
+}
+
+@media only screen and (max-width:750px) { 
+	#tipo {
+        height: 100px;
+        width: 450px;
+        overflow: hidden;
+        margin-top: 25px;
+    }
+}
+
+@media only screen and (max-width:450px) { 
+	#tipo {
+        height: 100px;
+        width: 100%;
+        overflow: hidden;
+        margin-top: 25px;
+    }
 }
 
 #tipo:hover {
-    height: 200px;
+    height: fit-content
 }
 
-
 #titolo {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
     height: 100px;
-    width: 750px;
-    /* background-image: url('../../assets/Immagine.png'); */
-    background-color: red;
+    width: 100%;
+}
+
+#titolo h1 {
+    margin: 0;
+    padding: 0;
+    font-family: Helvetica;
+    font-weight: bold;
+    color: white;
+    margin-left: 50px;
+}
+
+.licei {
+    background: linear-gradient(to bottom right, #ed5f5f 50% ,#f08267 50%);
+}
+
+.tecnici {
+    background: linear-gradient(to bottom right, #f2b361 50%, #fad4a5 50%);
+}
+
+.professionali {
+    background: linear-gradient(to bottom right, #8ebfb4 50%, #cce0da 50%);
+}
+
+.c-licei {
+    background-color: #f08267;
+}
+
+.c-tecnici {
+    background-color: #fad4a5;
+}
+
+.c-professionali {
+    background-color: #cce0da;
 }
