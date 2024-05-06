@@ -53,8 +53,12 @@
     }
 }
 
+#tipo {
+    transition: height 1s ease 0s;
+}
+
 #tipo:hover {
-    height: fit-content
+    height: 1000px;
 }
 
 #titolo {

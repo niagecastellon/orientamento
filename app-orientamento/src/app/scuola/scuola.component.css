@@ -1,12 +1,17 @@
 #main {
     transition: all 0.5s linear;
     color: white;
+    margin-bottom: 65px;
 }
 
 #dettagli {
     display: grid;
     grid-template-columns: 400px auto;
-    height: 150px;
+    height: fit-content
+}
+
+#dettagli, p {
+    margin-inline: 50px;
 }
 
 h1, h2 {
@@ -24,7 +29,19 @@ h1 {
     font-size: 36px;
 }
 
+#immagine {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 img {
     height: 75px;
     border: 2px solid currentColor;
+    cursor: pointer;
+    transition: transform 250ms ease-in-out;
+}
+
+img:hover {
+    transform: scale(115%);
 }
