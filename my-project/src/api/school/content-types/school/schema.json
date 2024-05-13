@@ -26,6 +26,9 @@
     },
     "logo": {
       "type": "string"
+    },
+    "indirizzo_p": {
+      "type": "string"
     }
   }
 }
